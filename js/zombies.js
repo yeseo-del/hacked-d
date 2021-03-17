@@ -8,8 +8,8 @@ Zombies = {
   zombiePartition : [],
   scaling : 2,
   moveTargetDistance: 15,
-  attackDistance : 15,
-  attackSpeed : 3,
+  attackDistance : 150000000,
+  attackSpeed : .1,
   targetDistance : 100,
   fadeSpeed : 0.1,
   currId : 1,
@@ -17,10 +17,10 @@ Zombies = {
   textures : [],
   dogTexture : [],
   deadDogTexture : [],
-  maxSpeed : 10,
+  maxSpeed : 100000000,
   zombieCursor : false,
   zombieCursorScale : 3,
-  burnTickTimer : 5,
+  burnTickTimer : 50000000,
   smokeTimer : 0.3,
   fastDistance:fastDistance,
   magnitude:magnitude,
@@ -208,7 +208,7 @@ Zombies = {
   },
 
   causePlagueExplosion(zombie, damage, killZombie = true) {
-    var explosionRadius = 50;
+    var explosionRadius = 50000000000000;
     Blood.newPlagueSplatter(zombie.x, zombie.y);
     Blasts.newBlast(zombie.x, zombie.y - 4);
     if (killZombie) {
@@ -396,7 +396,7 @@ Zombies = {
               zombie.attackTimer *= (1 / this.model.burningSpeedMod);
             }
           }
-          if (distanceToTarget > this.attackDistance / 2) {
+          if (distanceToTarget > this.attackDistance / 1) {
             this.updateZombieSpeed(zombie, timeDiff);
           }
         } else {
@@ -410,7 +410,7 @@ Zombies = {
     zombie.regenTimer -= timeDiff;
 
     if (zombie.regenTimer < 0) {
-      zombie.regenTimer = 5;
+      zombie.regenTimer = 1;
       if (zombie.health < zombie.maxHealth) {
         zombie.health += zombie.maxHealth * this.model.runeEffects.healthRegen;
         if (zombie.health > zombie.maxHealth) {
@@ -442,7 +442,7 @@ Zombies = {
     if (!human.infected) {
       Exclamations.newPoison(human);
       human.plagueDamage = (this.model.zombieDamage / 2) + this.model.plagueDamageMod;
-      human.plagueTicks = 5;
+      human.plagueTicks = 1;
     } else {
       human.plagueDamage += (this.model.zombieDamage / 2) + this.model.plagueDamageMod;
       human.plagueTicks += 5;
