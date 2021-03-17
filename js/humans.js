@@ -1,11 +1,11 @@
 Humans = {
 
   map : ZmMap,
-  maxWalkSpeed : 15,
-  maxRunSpeed : 35,
+  maxWalkSpeed : 0,
+  maxRunSpeed : 0,
   minSecondsTostand : 1,
   maxSecondsToStand : 60, // 60
-  chanceToStayInCurrentBuilding : 0.95, // 0.95
+  chanceToStayInCurrentBuilding : 100, // 0.95
   textures : [],
   doctorTextures :[],
   doctorDeadTexture : {},
