@@ -109,7 +109,7 @@ PrestigePoints = {
 };
 
 Blood = {
-  maxParts : 1000,
+  maxParts : 100000000,
   partCounter : 0,
   partsPerSplatter : 6,
   ecoPartsPerSplatter : 3,
@@ -234,7 +234,7 @@ Blood = {
 };
 
 Bones = {
-  maxParts : 100,
+  maxParts : 10000,
   partsPerSplatter : 3,
   container : null,
   sprites : [],
@@ -469,7 +469,7 @@ Exclamations = {
 Bullets = {
   maxParts : 20,
   speed : 150,
-  hitbox : 12,
+  hitbox : 0,
   sprites : [],
   discardedSprites : [],
   fadeSpeed : 0.2,
